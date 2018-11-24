@@ -1,4 +1,4 @@
-from address_sercher import addresseacher
+from address_sercher import AddressSearcher
 
 
 def main():
@@ -6,13 +6,12 @@ def main():
     postal_code = input("郵便番号を入力してね: ")
     # 郵便番号を使って地名をとってくる
 
+    address_searcher = AddressSearcher()
 
-address_sercher = AddressSearcer()
-
-location = adress_searcher.search(postal_code)
+    location = address_searcher.search(postal_code)
 
 # 地名をprintする
-print(location)
+    print(location)
 
 if __name__ == '__main__':
     main()
