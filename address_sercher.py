@@ -16,7 +16,9 @@ class AddressSearcher:
         if response_dict["results"] is None:
             return f"該当するデータは見つかりませんでした。検索キーワードを変えて再検索してください。"
 
+        return self.location(response_dict)
 
+    def location(self, response_dict):
         都道府県 = response_dict["results"][0]["address1"]
         市区町村 = response_dict["results"][0]["address2"]
         町域 = response_dict["results"][0]["address3"]
